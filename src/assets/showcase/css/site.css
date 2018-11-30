@@ -17,7 +17,7 @@ body {
 }
 
 #layout-topbar {
-    background-color: #20272a;
+    background-color: #6eb214;
     box-sizing: border-box;
     display: block;
     padding: 0;
@@ -94,7 +94,7 @@ body {
 }
 
 .topbar-menu > li > a:hover {
-    background-color: #4a4f52;
+    background-color: #85c23b;
 }
 
 .topbar-menu > li > ul {

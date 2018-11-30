@@ -5,7 +5,7 @@
         </a>
 
         <a href="#" class="logo" [routerLink]="['/']">
-            <img alt="logo" src="assets/showcase/images/logo.png" />
+            <img alt="logo" src="assets/showcase/images/EA_logo.svg" />
         </a>
 
         <ul class="topbar-menu">
@@ -69,6 +69,7 @@
                     (onSelect)="selectRoute($event)" placeholder="Search"></p-autoComplete>
                     <i class="pi pi-search"></i>
             </div>
+<!--
             <a id="menu_input" #inputmenutitle [class.active-menuitem]="inputmenutitle.id == activeMenuId" (click)="activeMenuId = (activeMenuId === inputmenutitle.id ? null : inputmenutitle.id)">
                 <img src="assets/showcase/images/icons/input-active.svg" class="layout-menu-icon-active"/>
                 <img src="assets/showcase/images/icons/input.svg" class="layout-menu-icon-inactive"/>
@@ -99,6 +100,7 @@
                 <a [routerLink]="['/togglebutton']" (click)="menuActive = false">&#9679; ToggleButton</a>
                 <a [routerLink]="['/tristatecheckbox']" (click)="menuActive = false">&#9679; TriCheckbox</a>
             </div>
+-->
 
             <a id="button_menutitle" #buttonmenutitle [class.active-menuitem]="buttonmenutitle.id == activeMenuId" (click)="activeMenuId = (activeMenuId === buttonmenutitle.id ? null : buttonmenutitle.id)">
                 <img src="assets/showcase/images/icons/button-active.svg" class="layout-menu-icon-active"/>
@@ -110,6 +112,7 @@
                 <a [routerLink]="['/splitbutton']" (click)="menuActive = false">&#9679; SplitButton</a>
             </div>
 
+<!--
             <a id="data_menutitle" #datamenutitle [class.active-menuitem]="datamenutitle.id == activeMenuId" (click)="activeMenuId = (activeMenuId === datamenutitle.id ? null : datamenutitle.id)">
                 <img src="assets/showcase/images/icons/data-active.svg" class="layout-menu-icon-active"/>
                 <img src="assets/showcase/images/icons/data.svg" class="layout-menu-icon-inactive"/>
@@ -254,6 +257,8 @@
                 <a [routerLink]="['/codehighlighter']" (click)="menuActive = false">&#9679; CodeHighlighter</a>
                 <a [routerLink]="['/terminal']" (click)="menuActive = false">&#9679; Terminal</a>
             </div>
+-->
+
         </div>
     </div>
 
