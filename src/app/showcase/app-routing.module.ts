@@ -9,11 +9,14 @@ import { HomeComponent } from './components/home/home.component';
             {path: 'setup', loadChildren: './components/setup/setup.module#SetupModule'},
             {path: 'theming', loadChildren: './components/theming/theming.module#ThemingModule'},
             {path: 'icons', loadChildren: './components/icons/icons.module#IconsModule'},
+/*
             {path: 'accordion', loadChildren: './components/accordion/accordiondemo.module#AccordionDemoModule'},
             {path: 'autocomplete', loadChildren: './components/autocomplete/autocompletedemo.module#AutoCompleteDemoModule'},
             {path: 'blockui', loadChildren: './components/blockui/blockuidemo.module#BlockUIDemoModule'},
             {path: 'breadcrumb', loadChildren: './components/breadcrumb/breadcrumbdemo.module#BreadcrumbDemoModule'},
+*/
             {path: 'button', loadChildren: './components/button/buttondemo.module#ButtonDemoModule'},
+/*
             {path: 'calendar', loadChildren: './components/calendar/calendardemo.module#CalendarDemoModule'},
             {path: 'captcha', loadChildren: './components/captcha/captchademo.module#CaptchaDemoModule'},
             {path: 'card', loadChildren: './components/card/carddemo.module#CardDemoModule'},
@@ -81,7 +84,9 @@ import { HomeComponent } from './components/home/home.component';
             {path: 'spinner', loadChildren: './components/spinner/spinnerdemo.module#SpinnerDemoModule'},
             {path: 'splitbutton', loadChildren: './components/splitbutton/splitbuttondemo.module#SplitButtonDemoModule'},
             {path: 'steps', loadChildren: './components/steps/stepsdemo.module#StepsDemoModule'},
-            {path: 'support', loadChildren: './components/support/support.module#SupportModule'},
+*/
+            {path: 'support', loadChildren: './components/support/support.module#SupportModule'}
+/*
             {path: 'table', loadChildren: './components/table/tabledemo.module#TableDemoModule'},
             {path: 'tabmenu', loadChildren: './components/tabmenu/tabmenudemo.module#TabMenuDemoModule'},
             {path: 'tabview', loadChildren: './components/tabview/tabviewdemo.module#TabViewDemoModule'},
@@ -96,7 +101,8 @@ import { HomeComponent } from './components/home/home.component';
             {path: 'tristatecheckbox', loadChildren: './components/tristatecheckbox/tristatecheckboxdemo.module#TriStateCheckboxDemoModule'},
             {path: 'validation', loadChildren: './components/validation/validationdemo.module#ValidationDemoModule'},
             {path: 'virtualscroller', loadChildren: './components/virtualscroller/virtualscrollerdemo.module#VirtualScrollerDemoModule'}
-        ], {scrollPositionRestoration: 'enabled'})    
+*/
+        ], {scrollPositionRestoration: 'enabled'})
     ],
     exports: [RouterModule]
 })
