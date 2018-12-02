@@ -1,2 +1,79 @@
 https://forum.primefaces.org/
 https://forum.primefaces.org/viewtopic.php?p=159783#p159783
+
+How to create a component:
+#################################
+- In D:\Temp\ea-component-library\src\app\components\, create your component folder. E.g. button. And add the following files:
+    * button.css
+    * button.spec.ts
+    * button.ts
+
+- In D:\Temp\ea-component-library\src\app\showcase\components, create your demo page folder. E.g. button. And add the following files.
+    * buttondemo.html
+    * buttondemo.module.ts
+    * buttondemo.ts
+    * buttondemo-routing.module.ts
+    - Add in the necessary files for D:\Temp\ea-component-library\src\app\showcase\service and D:\Temp\ea-component-library\src\app\showcase\domain if necessary.
+
+- In D:\Temp\ea-component-library\src\app\showcase\app-routing.module.ts, add the routing link, E.g.
+            {path: 'button', loadChildren: './components/button/buttondemo.module#ButtonDemoModule'},
+
+- In D:\Temp\ea-component-library\src\app\showcase\app.component.html, create the link to the new demo page. E.g.
+                <a id="button_menutitle" #buttonmenutitle [class.active-menuitem]="buttonmenutitle.id == activeMenuId" (click)="activeMenuId = (activeMenuId === buttonmenutitle.id ? null : buttonmenutitle.id)">
+                    <img src="assets/showcase/images/icons/button-active.svg" class="layout-menu-icon-active"/>
+                    <img src="assets/showcase/images/icons/button.svg" class="layout-menu-icon-inactive"/>
+                    <span>Button</span>
+                </a>
+                <div [ngClass]="{'submenushow': (buttonmenutitle.id == activeMenuId), 'submenuhide': (buttonmenutitle.id != activeMenuId)}">
+                    <a [routerLink]="['/button']" (click)="menuActive = false">&#9679; Button</a>
+                    <a [routerLink]="['/splitbutton']" (click)="menuActive = false">&#9679; SplitButton</a>
+                </div>
+
+- In D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css, E.g.
+    @import '../../../app/components/button/button.css';
+
+
+The following is preparation for library deployment so different application can use it:
+-------------------------------------------------------------------------------------------------
+- In D:\Temp\ea-component-library\exports, create the component files:
+    * button.js
+    * button.d.js
+    Note: The ./components/button/button location mentioned in both files will be generated through "build-components" script in package.json
+
+- In D:\Temp\ea-component-library\primeng.js, add the component files. E.g.
+    __export(require("./components/button/button"));
+
+- In D:\Temp\ea-component-library\primeng.d.ts, add the component files. E.g.
+    export * from './components/button/button';
+
+
+Files that don't need to be touched
+----------------------------------------
+- D:\Temp\ea-component-library\resources\primeng.css. It was taking out from common.css and each component's css files and concat into primeng.css and put into resource folder.
+
+
+How to build production build:
+#########################################
+- Run "npm run build-redistribute" to create the distribution file.
+    * D:\Temp\ea-component-library\components will be generated through "build-components"
+    * D:\Temp\ea-component-library\resources will be generated through "build-assets"
+    * D:\Temp\ea-component-library\*.d.ts and
+      D:\Temp\ea-component-library\*.js
+      (except for D:\Temp\ea-component-library\primeng.d.ts and
+                  D:\Temp\ea-component-library\primeng.js)
+      Are generated through "build-exports", basically copy all D:\Temp\ea-component-library\exports\* into D:\Temp\ea-component-library\ folder
+
+
+
+What to do to strip repo as a basic system (with button as the only one component):
+#######################################################################################################
+- D:\Temp\ea-component-library\src\app\showcase\app.component.html,         comment out all the routerLink and left only [routerLink]="['/button']"
+- D:\Temp\ea-component-library\src\app\showcase\app-routing.module.ts       comment all path except for '', 'setup', 'theming', 'icons', 'button', 'support'
+- D:\Temp\ea-component-library\src\app\showcase\components\*                removed all folders except for 'button', 'home', 'icons', 'setup', 'support', 'theming'
+- D:\Temp\ea-component-library\src\app\showcase\domain\                     removed folder
+- D:\Temp\ea-component-library\src\app\showcase\service\*                   removed carservice.ts, countryservice.ts, eventservice.ts, nodeservice.ts, only key 'iconservice.ts'
+- D:\Temp\ea-component-library\src\app\showcase\app.module.ts               removed reference to CarService, CountryService, EventService, NodeService
+
+
+
+
