@@ -3,11 +3,30 @@ https://forum.primefaces.org/viewtopic.php?p=159783#p159783
 
 How to create a component:
 #################################
+(For component itself...)
+===========================
 - In D:\Temp\ea-component-library\src\app\components\, create your component folder. E.g. button. And add the following files:
     * button.css
     * button.spec.ts
     * button.ts
 
+- In D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css, E.g.
+    @import '../../../app/components/button/button.css';
+
+- In D:\Temp\ea-component-library\exports, create the component files:
+    * button.js
+    * button.d.js
+    Note: The ./components/button/button location mentioned in both files will be generated through "build-components" script in package.json
+
+- In D:\Temp\ea-component-library\primeng.js, add the component files. E.g.
+    __export(require("./components/button/button"));
+
+- In D:\Temp\ea-component-library\primeng.d.ts, add the component files. E.g.
+    export * from './components/button/button';
+
+
+(For Demo page...)
+======================
 - In D:\Temp\ea-component-library\src\app\showcase\components, create your demo page folder. E.g. button. And add the following files.
     * buttondemo.html
     * buttondemo.module.ts
@@ -29,26 +48,9 @@ How to create a component:
                     <a [routerLink]="['/splitbutton']" (click)="menuActive = false">&#9679; SplitButton</a>
                 </div>
 
-- In D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css, E.g.
-    @import '../../../app/components/button/button.css';
-
-
-The following is preparation for library deployment so different application can use it:
--------------------------------------------------------------------------------------------------
-- In D:\Temp\ea-component-library\exports, create the component files:
-    * button.js
-    * button.d.js
-    Note: The ./components/button/button location mentioned in both files will be generated through "build-components" script in package.json
-
-- In D:\Temp\ea-component-library\primeng.js, add the component files. E.g.
-    __export(require("./components/button/button"));
-
-- In D:\Temp\ea-component-library\primeng.d.ts, add the component files. E.g.
-    export * from './components/button/button';
-
 
 Files that don't need to be touched
-----------------------------------------
+=======================================
 - D:\Temp\ea-component-library\resources\primeng.css. It was taking out from common.css and each component's css files and concat into primeng.css and put into resource folder.
 
 
@@ -63,6 +65,7 @@ How to build production build:
                   D:\Temp\ea-component-library\primeng.js)
       Are generated through "build-exports", basically copy all D:\Temp\ea-component-library\exports\* into D:\Temp\ea-component-library\ folder
 
+- Run "npm pack" to create the tar file, e.g. primeng-7.0.1-SNAPSHOT.tgz
 
 
 What to do to strip repo as a basic system (with button as the only one component):
