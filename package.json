@@ -8,7 +8,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-components": "ngc -p tsconfig-release.json",
+    "build-assets": "gulp build-assets",
+    "build-exports": "gulp build-exports",
+    "build-styles": "node-sass src/assets/components -o src/assets/components",
+    "build-redistribute": "npm run build-components && npm run build-assets && npm run build-styles && npm run build-exports"
   },
   "repository": {
     "type": "git",
@@ -53,6 +58,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.5.3",
     "primeflex": "1.0.0-rc.1",
     "primeicons": "1.0.0",
     "prismjs": "1.15.0",
