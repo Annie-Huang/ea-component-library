@@ -377,7 +377,8 @@ body {
 }
 
 .content-section.introduction {
-    background-image: linear-gradient(to left, #2bc0ec, #1b81d7);
+    /*background-image: linear-gradient(to left, #2bc0ec, #1b81d7);*/
+    background-image: linear-gradient(to left, #96c93d, #00b09b);
     color: #ffffff;
 }
 
