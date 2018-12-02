@@ -1,5 +1,10 @@
 https://forum.primefaces.org/
 https://forum.primefaces.org/viewtopic.php?p=159783#p159783
+https://stackoverflow.com/questions/50111036/angular-ngc-or-tsc
+https://stackoverflow.com/questions/46087105/angular-aot-compilation-ng-vs-ngc
+https://stackoverflow.com/questions/44642696/whats-the-relationship-and-difference-between-ng-build-and-ngc
+http://www.gistia.com/angular-performance-two-strategies/
+
 
 How to create a component:
 #################################
@@ -81,6 +86,7 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\src\app\components\common\api.ts             updated to only keep those required by button, autocomplete, codehighlighter.
 - D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css          updated to only keep those required by button, autocomplete, codehighlighter.
 - D:\Temp\ea-component-library\exports                                      removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (to match D:\Temp\ea-component-library\src\app\components)
-
+- D:\Temp\ea-component-library\primeng.js                                   removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip.
+- D:\Temp\ea-component-library\primeng.d.ts                                 removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip.
 
 
