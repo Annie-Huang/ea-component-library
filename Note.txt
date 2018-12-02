@@ -73,7 +73,10 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\src\app\showcase\domain\                     removed folder
 - D:\Temp\ea-component-library\src\app\showcase\service\*                   removed carservice.ts, countryservice.ts, eventservice.ts, nodeservice.ts, only key 'iconservice.ts'
 - D:\Temp\ea-component-library\src\app\showcase\app.module.ts               removed reference to CarService, CountryService, EventService, NodeService
-
+- D:\Temp\ea-component-library\src\app\components\*                         remove all except for button, autocomplete, codehighlighter and the dependentcy of these 3 modules.
+- D:\Temp\ea-component-library\src\app\components\common\*                  remvoe all except for those required by button, autocomplete, codehighlighter.
+- D:\Temp\ea-component-library\src\app\components\common\api.ts             update to only keep those required by button, autocomplete, codehighlighter.
+- D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css          update to only keep those required by button, autocomplete, codehighlighter.
 
 
 
