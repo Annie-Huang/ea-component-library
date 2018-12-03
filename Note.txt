@@ -15,7 +15,7 @@ How to create a component:
     * button.spec.ts
     * button.ts
 
-- In D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css, E.g.
+- In D:\Temp\ea-component-library\src\assets\showcase\css\eauicomp.css, E.g.
     @import '../../../app/components/button/button.css';
 
 - In D:\Temp\ea-component-library\exports, create the component files:
@@ -56,7 +56,7 @@ How to create a component:
 
 Files that don't need to be touched
 =======================================
-- D:\Temp\ea-component-library\resources\primeng.css. It was taking out from common.css and each component's css files and concat into primeng.css and put into resource folder.
+- D:\Temp\ea-component-library\resources\eauicomp.css. From the gulp task, it was taking out from common.css and each component's css files and concat into eauicomp.css and put into resource folder.
 
 
 How to build production build:
@@ -112,7 +112,7 @@ bradleys-mbp:my-angular-app anniehuang$ npm install ea-c-l-test
 In angular.json file, add the following for style
 "styles": [
   "node_modules/ea-c-l-test/resources/themes/nova-light/theme.css",
-  "node_modules/ea-c-l-test/resources/primeng.min.css"
+  "node_modules/ea-c-l-test/resources/eauicomp.min.css"
   //...
 ],
 
@@ -137,7 +137,7 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\src\app\components\*                         removed all except for button, autocomplete, codehighlighter and the dependentcy of these 3 modules.
 - D:\Temp\ea-component-library\src\app\components\common\*                  removed all except for those required by button, autocomplete, codehighlighter.
 - D:\Temp\ea-component-library\src\app\components\common\api.ts             updated to only keep those required by button, autocomplete, codehighlighter.
-- D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css          updated to only keep those required by button, autocomplete, codehighlighter.
+- D:\Temp\ea-component-library\src\assets\showcase\css\eauicomp.css         updated to only keep those required by button, autocomplete, codehighlighter. (used to call D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css)
 - D:\Temp\ea-component-library\exports                                      removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (to match D:\Temp\ea-component-library\src\app\components)
 - D:\Temp\ea-component-library\eauicomp.js                                  removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.js)
 - D:\Temp\ea-component-library\eauicomp.d.ts                                removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.d.ts)

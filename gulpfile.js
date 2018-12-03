@@ -12,7 +12,7 @@ gulp.task('build-css', function() {
         'src/app/components/common/common.css',
 		    'src/app/components/**/*.css'
     ])
-        .pipe(concat('primeng.css'))
+        .pipe(concat('eauicomp.css'))
         .pipe(gulp.dest('resources'));
 });
 
@@ -21,10 +21,10 @@ gulp.task('build-css-prod', function() {
         'src/app/components/common/common.css',
         'src/app/components/**/*.css'
     ])
-    .pipe(concat('primeng.css'))
+    .pipe(concat('eauicomp.css'))
     .pipe(gulp.dest('resources'))
     .pipe(uglifycss({"uglyComments": true}))
-    .pipe(rename('primeng.min.css'))
+    .pipe(rename('eauicomp.min.css'))
     .pipe(gulp.dest('resources'));	
 });
 
@@ -59,4 +59,3 @@ gulp.task('clean', function() {
 //Building project with run sequence
 gulp.task('build-assets', ['clean','copy-component-css', 'build-css-prod', 'images', 'themes']);
 
-        
