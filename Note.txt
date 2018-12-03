@@ -23,10 +23,10 @@ How to create a component:
     * button.d.js
     Note: The ./components/button/button location mentioned in both files will be generated through "build-components" script in package.json
 
-- In D:\Temp\ea-component-library\primeng.js, add the component files. E.g.
+- In D:\Temp\ea-component-library\eauicomp.js, add the component files. E.g.
     __export(require("./components/button/button"));
 
-- In D:\Temp\ea-component-library\primeng.d.ts, add the component files. E.g.
+- In D:\Temp\ea-component-library\eauicomp.d.ts, add the component files. E.g.
     export * from './components/button/button';
 
 
@@ -66,8 +66,8 @@ How to build production build:
     * D:\Temp\ea-component-library\resources will be generated through "build-assets"
     * D:\Temp\ea-component-library\*.d.ts and
       D:\Temp\ea-component-library\*.js
-      (except for D:\Temp\ea-component-library\primeng.d.ts and
-                  D:\Temp\ea-component-library\primeng.js)
+      (except for D:\Temp\ea-component-library\eauicomp.d.ts and
+                  D:\Temp\ea-component-library\eauicomp.js)
       Are generated through "build-exports", basically copy all D:\Temp\ea-component-library\exports\* into D:\Temp\ea-component-library\ folder
 
 - Run "npm pack" to create the tar file, e.g. primeng-7.0.1-SNAPSHOT.tgz
@@ -117,7 +117,7 @@ In angular.json file, add the following for style
 ],
 
 In app.module.ts, import the module you need to use, e.g.
-import {ButtonModule} from 'ea-c-l-test/primeng';
+import {ButtonModule} from 'ea-c-l-test/eauicomp';
 ...
   imports: [
     BrowserModule,
@@ -139,7 +139,7 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\src\app\components\common\api.ts             updated to only keep those required by button, autocomplete, codehighlighter.
 - D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css          updated to only keep those required by button, autocomplete, codehighlighter.
 - D:\Temp\ea-component-library\exports                                      removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (to match D:\Temp\ea-component-library\src\app\components)
-- D:\Temp\ea-component-library\primeng.js                                   removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip.
-- D:\Temp\ea-component-library\primeng.d.ts                                 removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip.
+- D:\Temp\ea-component-library\eauicomp.js                                  removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.js)
+- D:\Temp\ea-component-library\eauicomp.d.ts                                removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.d.ts)
 
 
