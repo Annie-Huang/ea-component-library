@@ -73,6 +73,59 @@ How to build production build:
 - Run "npm pack" to create the tar file, e.g. primeng-7.0.1-SNAPSHOT.tgz
 
 
+How to publish to npm:
+#########################################
+bradleys-mbp:package anniehuang$ npm login
+Username: annie.huang
+Password:
+Email: (this IS public) annie.hn@gmail.com
+Logged in as annie.huang on https://registry.npmjs.org/.
+bradleys-mbp:package anniehuang$ npm whoami
+annie.huang
+bradleys-mbp:package anniehuang$ npm version
+{ 'ea-c-l-test': '0.0.1',
+  npm: '5.6.0',
+  ares: '1.10.1-DEV',
+  cldr: '32.0',
+  http_parser: '2.7.0',
+  icu: '60.1',
+  modules: '57',
+  nghttp2: '1.25.0',
+  node: '8.10.0',
+  openssl: '1.0.2n',
+  tz: '2017c',
+  unicode: '10.0',
+  uv: '1.19.1',
+  v8: '6.2.414.50',
+  zlib: '1.2.11' }
+bradleys-mbp:package anniehuang$ npm version 0.0.2	<< If you need to change version no for every publish.
+v0.0.2
+bradleys-mbp:package anniehuang$ npm publish
++ ea-c-l-test@0.0.1
+
+
+How to install ea-c-l-test in your project:
+#################################################
+bradleys-mbp:my-angular-app anniehuang$ npm install ea-c-l-test
++ ea-c-l-test@0.0.1
+
+In angular.json file, add the following for style
+"styles": [
+  "node_modules/ea-c-l-test/resources/themes/nova-light/theme.css",
+  "node_modules/ea-c-l-test/resources/primeng.min.css"
+  //...
+],
+
+In app.module.ts, import the module you need to use, e.g.
+import {ButtonModule} from 'ea-c-l-test/primeng';
+...
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule
+  ],
+
+
 What to do to strip repo as a basic system (with button as the only one component):
 #######################################################################################################
 - D:\Temp\ea-component-library\src\app\showcase\app.component.html,         comment out all the routerLink and left only [routerLink]="['/button']"
