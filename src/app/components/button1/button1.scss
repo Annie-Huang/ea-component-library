@@ -1,6 +1,8 @@
+@import "~src/scss/variables";
+
 .ui-button1 {
-    background-color: black;
-    color: white;
+    background-color: $background-color;
+    color: $font-color;
     height: 3em;
     font-size: 14px;
     outline: none;

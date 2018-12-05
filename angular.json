@@ -33,7 +33,7 @@
                 "node_modules/primeicons/primeicons.css",
                 "node_modules/primeflex/primeflex.css",
                 "node_modules/font-awesome/css/font-awesome.min.css",
-                "src/styles.scss"
+                "src/scss/styles.scss"
               ],
               "scripts": [
                 "./node_modules/moment/moment.js",
@@ -89,7 +89,7 @@
               "tsConfig": "src/tsconfig.spec.json",
               "karmaConfig": "src/karma.conf.js",
               "styles": [
-                "src/styles.scss"
+                "src/scss/styles.scss"
               ],
               "scripts": [],
               "assets": [
