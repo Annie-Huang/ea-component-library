@@ -4,6 +4,7 @@ https://stackoverflow.com/questions/50111036/angular-ngc-or-tsc
 https://stackoverflow.com/questions/46087105/angular-aot-compilation-ng-vs-ngc
 https://stackoverflow.com/questions/44642696/whats-the-relationship-and-difference-between-ng-build-and-ngc
 http://www.gistia.com/angular-performance-two-strategies/
+https://github.com/angular/angular-cli/wiki/stories-css-preprocessors
 
 
 How to create a component:
@@ -147,3 +148,19 @@ Others:
 ##########
 "compile:sass": "node-sass src/assets/main.scss src/styles.css -w"
 npm run compile:sass
+Run:
+ng set default.styleExt less
+
+      "styles": [
+        "styles.scss",		<< change styles.less
+      ],
+
+Need to fix the the gulpfile.js:
+    gulp.src([
+        'src/app/components/common/common.css',
+        'src/app/components/**/*.css'
+    ])
+    and
+    gulp.src([
+        'src/app/components/**/*.css'
+    ])
