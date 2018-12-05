@@ -101,6 +101,7 @@
             </a>
             <div [ngClass]="{'submenushow': (buttonmenutitle.id == activeMenuId), 'submenuhide': (buttonmenutitle.id != activeMenuId)}">
                 <a [routerLink]="['/button']" (click)="menuActive = false">&#9679; Button</a>
+                <a [routerLink]="['/button1']" (click)="menuActive = false">&#9679; Button1</a>
                 <!--<a [routerLink]="['/splitbutton']" (click)="menuActive = false">&#9679; SplitButton</a>-->
             </div>
 

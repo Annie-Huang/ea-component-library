@@ -143,3 +143,7 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\eauicomp.d.ts                                removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.d.ts)
 
 
+Others:
+##########
+"compile:sass": "node-sass src/assets/main.scss src/styles.css -w"
+npm run compile:sass

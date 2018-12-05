@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
             {path: 'breadcrumb', loadChildren: './components/breadcrumb/breadcrumbdemo.module#BreadcrumbDemoModule'},
 */
             {path: 'button', loadChildren: './components/button/buttondemo.module#ButtonDemoModule'},
+            {path: 'button1', loadChildren: './components/button1/buttondemo.module#ButtonDemoModule'},
 /*
             {path: 'calendar', loadChildren: './components/calendar/calendardemo.module#CalendarDemoModule'},
             {path: 'captcha', loadChildren: './components/captcha/captchademo.module#CaptchaDemoModule'},
