@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    sass = require("gulp-sass"),
     concat = require('gulp-concat'),
     uglifycss = require('gulp-uglifycss'),
     rename = require('gulp-rename'),
@@ -16,7 +17,7 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest('resources'));
 });
 
-gulp.task('build-css-prod', function() {
+gulp.task('original-build-css-prod', function() {
     gulp.src([
         'src/app/components/common/common.css',
         'src/app/components/**/*.css'
@@ -28,10 +29,37 @@ gulp.task('build-css-prod', function() {
     .pipe(gulp.dest('resources'));	
 });
 
-gulp.task('copy-component-css', function () {
+gulp.task('build-css-prod', function() {
+    gulp.src([
+        'resources/components/common/common.scss',
+        'resources/components/**/*.scss'
+    ])
+    .pipe(concat('eauicomp.css'))
+    .pipe(gulp.dest('resources'))
+    .pipe(uglifycss({"uglyComments": true}))
+    .pipe(rename('eauicomp.min.css'))
+    .pipe(gulp.dest('resources'));
+});
+
+gulp.task('original-copy-component-css', function () {
     gulp.src([
         'src/app/components/**/*.css'
     ])
+    .pipe(gulp.dest('resources/components'));
+});
+
+gulp.task('copy-component-scss', function () {
+    gulp.src([
+        'src/app/components/**/*.scss'
+    ])
+    .pipe(gulp.dest('resources/components'));
+});
+
+gulp.task('build-component-css', function () {
+    gulp.src([
+        'src/app/components/**/*.scss'
+    ])
+    .pipe(sass())
     .pipe(gulp.dest('resources/components'));
 });
 
@@ -57,5 +85,5 @@ gulp.task('clean', function() {
 });
 
 //Building project with run sequence
-gulp.task('build-assets', ['clean','copy-component-css', 'build-css-prod', 'images', 'themes']);
-
+// gulp.task('build-assets', ['clean','copy-component-css', 'build-css-prod', 'images', 'themes']);
+gulp.task('build-assets', ['clean','copy-component-scss', 'build-component-css', 'build-css-prod', 'images', 'themes']);
