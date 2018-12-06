@@ -17,10 +17,12 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest('resources'));
 });
 
-gulp.task('original-build-css-prod', function() {
+/*
+// Backup for original build-css-prod task
+gulp.task('build-css-prod', function() {
     gulp.src([
         'src/app/components/common/common.css',
-        'src/app/components/**/*.css'
+        'src/app/components/!**!/!*.css'
     ])
     .pipe(concat('eauicomp.css'))
     .pipe(gulp.dest('resources'))
@@ -28,12 +30,14 @@ gulp.task('original-build-css-prod', function() {
     .pipe(rename('eauicomp.min.css'))
     .pipe(gulp.dest('resources'));	
 });
+*/
 
 gulp.task('build-css-prod', function() {
     gulp.src([
-        'resources/components/common/common.scss',
-        'resources/components/**/*.scss'
+        'src/app/components/common/common.scss',
+        'src/app/components/**/*.scss'
     ])
+    .pipe(sass())
     .pipe(concat('eauicomp.css'))
     .pipe(gulp.dest('resources'))
     .pipe(uglifycss({"uglyComments": true}))
@@ -41,12 +45,17 @@ gulp.task('build-css-prod', function() {
     .pipe(gulp.dest('resources'));
 });
 
-gulp.task('original-copy-component-css', function () {
+
+/*
+// Backup for original copy-component-css task
+gulp.task('copy-component-css', function () {
     gulp.src([
-        'src/app/components/**/*.css'
+        'src/app/components/!**!/!*.css'
     ])
     .pipe(gulp.dest('resources/components'));
 });
+*/
+
 
 gulp.task('copy-component-scss', function () {
     gulp.src([
