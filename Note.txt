@@ -164,3 +164,5 @@ Need to fix the the gulpfile.js:
     gulp.src([
         'src/app/components/**/*.css'
     ])
+
+sass: --watch app.sass:app.css
