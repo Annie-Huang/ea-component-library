@@ -64,6 +64,14 @@ gulp.task('copy-component-scss', function () {
     .pipe(gulp.dest('resources/components'));
 });
 
+gulp.task('copy-global-scss', function () {
+    gulp.src([
+        'src/scss/*.scss',
+        '!src/scss/styles.scss'
+    ])
+    .pipe(gulp.dest('resources/scss'));
+});
+
 gulp.task('build-component-css', function () {
     gulp.src([
         'src/app/components/**/*.scss'
@@ -95,4 +103,12 @@ gulp.task('clean', function() {
 
 //Building project with run sequence
 // gulp.task('build-assets', ['clean','copy-component-css', 'build-css-prod', 'images', 'themes']);
-gulp.task('build-assets', ['clean','copy-component-scss', 'build-component-css', 'build-css-prod', 'images', 'themes']);
+gulp.task('build-assets', [
+    'clean',
+    'copy-global-scss',
+    'copy-component-scss',
+    'build-component-css',
+    'build-css-prod',
+    'images',
+    'themes'
+]);
