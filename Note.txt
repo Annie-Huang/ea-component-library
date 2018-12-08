@@ -5,6 +5,10 @@ https://stackoverflow.com/questions/46087105/angular-aot-compilation-ng-vs-ngc
 https://stackoverflow.com/questions/44642696/whats-the-relationship-and-difference-between-ng-build-and-ngc
 http://www.gistia.com/angular-performance-two-strategies/
 https://github.com/angular/angular-cli/wiki/stories-css-preprocessors
+https://www.learnstorybook.com/
+https://github.com/storybooks/storybook/issues/125
+https://github.com/storybooks/storybook/issues/4481
+D:\Temp\Test\car-show>npx -p @storybook/cli sb init
 
 
 How to create a component:
