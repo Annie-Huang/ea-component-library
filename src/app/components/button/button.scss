@@ -1,10 +1,27 @@
-//@import "~src/scss/variables";
 @import "../../../scss/variables";
 
 .ea-button {
-    background-color: $background-color;
+    background: $background-color url("images/rock_01_png___by_alzstock-d5r84up.png");
     color: $font-color;
     height: 3em;
     font-size: 14px;
     outline: none;
 }
+
+//.ea-button0 {
+//    background-color: $background-color;
+//    color: $font-color;
+//    height: 3em;
+//    font-size: 14px;
+//    outline: none;
+//    background-image: url('app/components/button/rock_01_png___by_alzstock-d5r84up.png');
+//}
+//
+//.ea-button1 {
+//    background-color: $background-color;
+//    color: $font-color;
+//    height: 3em;
+//    font-size: 14px;
+//    outline: none;
+//    background-image: url('assets/components/images/1rock_01_png___by_alzstock-d5r84up.png');
+//}

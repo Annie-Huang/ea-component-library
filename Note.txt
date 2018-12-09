@@ -9,6 +9,7 @@ https://www.learnstorybook.com/
 https://github.com/storybooks/storybook/issues/125
 https://github.com/storybooks/storybook/issues/4481
 D:\Temp\Test\car-show>npx -p @storybook/cli sb init
+https://github.com/angular/angular-cli/issues/4778
 
 
 How to create a component:
@@ -16,12 +17,15 @@ How to create a component:
 (For component itself...)
 ===========================
 - In D:\Temp\ea-component-library\src\app\components\, create your component folder. E.g. button. And add the following files:
-    * button.css
+    * button.scss
     * button.spec.ts
     * button.ts
+    * If your button.scss refers to an image, put the images into D:\Temp\ea-component-library\src\images and put url as relative path. E.g. url('image/xxx.png')
+      (Note: src\images is set as assets in angular.json. During the "build-redistribute", the whole src\images will be copy into resource\images folder so the relative path in eauicomp.css works)
+
 
 - In D:\Temp\ea-component-library\src\assets\showcase\css\eauicomp.css, E.g.
-    @import '../../../app/components/button/button.css';
+    @import '../../../app/components/button/button.scss';
 
 - In D:\Temp\ea-component-library\exports, create the component files:
     * button.js
@@ -61,7 +65,7 @@ How to create a component:
 
 Files that don't need to be touched
 =======================================
-- D:\Temp\ea-component-library\resources\eauicomp.css. From the gulp task, it was taking out from common.css and each component's css files and concat into eauicomp.css and put into resource folder.
+- D:\Temp\ea-component-library\resources\eauicomp.css. From the gulp task, it was taking out from common.scss and each component's scss files, compiled them into css and concat into eauicomp.css and put into resource folder.
 
 
 How to build production build:
