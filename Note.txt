@@ -12,6 +12,7 @@ D:\Temp\Test\car-show>npx -p @storybook/cli sb init
 https://github.com/angular/angular-cli/issues/4778
 Juri Strumpflohner - Create and publish Angular libs like a Pro (https://www.youtube.com/watch?v=K4YMmwxGKjY)
 https://angular.io/guide/deployment
+https://www.tsmean.com/articles/how-to-write-a-typescript-library/angular/
 
 How to create a component:
 #################################
@@ -21,8 +22,17 @@ How to create a component:
     * button.scss
     * button.spec.ts
     * button.ts
-    * If your button.scss refers to an image, put the images into D:\Temp\ea-component-library\src\images and put url as relative path. E.g. url('image/xxx.png')
-      (Note: src\images is set as assets in angular.json. During the "build-redistribute", the whole src\images will be copy into resource\images folder so the relative path in eauicomp.css works)
+    Note:
+    o You cannot have separate html file as component library requires INLINE HTML (e.g. it will not able to find https://<the-app-that-use-your-library>/button.html).
+      You can initially have button.html to test it locally (it will work in local npm run start). When it's ready, put it back in the the button.ts file.
+      Basically use template with ``, not templateUrl: ['./button.html']
+    o You cannot link style file into ts file as component library requires INLINE STYLING (e.g. it will not able to find https://<the-app-that-use-your-library>/button.scss).
+      Basically you can use styles: [""], not styleUrls: ['./button.scss']
+      At the moment, the button.scss file is bundle up correctly in build and package, so you can put style there and it will apply to the element both locally and in npm package.
+      But remember to use class name that is unique to your element. E.g. ea-button as a class name.
+    o If your button.scss refers to an image, put the images into D:\Temp\ea-component-library\src\images and put url as relative path. E.g. url('image/xxx.png')
+      (src\images is set as assets in angular.json. During the "build-redistribute", the whole src\images will be copy into resource\images folder so the relative path in eauicomp.css works)
+
 
 
 - In D:\Temp\ea-component-library\src\assets\showcase\css\eauicomp.css, E.g.
