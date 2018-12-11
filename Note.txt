@@ -10,7 +10,7 @@ https://github.com/storybooks/storybook/issues/125
 https://github.com/storybooks/storybook/issues/4481
 D:\Temp\Test\car-show>npx -p @storybook/cli sb init
 https://github.com/angular/angular-cli/issues/4778
-
+Juri Strumpflohner - Create and publish Angular libs like a Pro (https://www.youtube.com/watch?v=K4YMmwxGKjY)
 
 
 How to create a component:
