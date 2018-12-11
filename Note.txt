@@ -11,7 +11,7 @@ https://github.com/storybooks/storybook/issues/4481
 D:\Temp\Test\car-show>npx -p @storybook/cli sb init
 https://github.com/angular/angular-cli/issues/4778
 Juri Strumpflohner - Create and publish Angular libs like a Pro (https://www.youtube.com/watch?v=K4YMmwxGKjY)
-
+https://angular.io/guide/deployment
 
 How to create a component:
 #################################
@@ -69,8 +69,8 @@ Files that don't need to be touched
 - D:\Temp\ea-component-library\resources\eauicomp.css. From the gulp task, it was taking out from common.scss and each component's scss files, compiled them into css and concat into eauicomp.css and put into resource folder.
 
 
-How to build production build:
-#########################################
+How to build production build for the npm package:
+#####################################################
 - Run "npm run build-redistribute" to create the distribution file.
     * D:\Temp\ea-component-library\components will be generated through "build-components"
     * D:\Temp\ea-component-library\resources will be generated through "build-assets"
@@ -133,6 +133,11 @@ bradleys-mbp:package anniehuang$ npm version
 bradleys-mbp:package anniehuang$ npm publish
 + ea-c-l-test@0.0.1
 
+Or you can do:
+npm publish /Users/anniehuang/projects/ea-component-library/ea-c-l-test-0.0.1.tgz
+Or if you want to install without publish, go to your other application and do:
+npm install ../ea-component-library/ea-c-l-test-0.0.1.tgz
+
 
 How to install ea-c-l-test in your project:
 #################################################
@@ -156,6 +161,14 @@ import {ButtonModule} from 'ea-c-l-test/eauicomp';
   ],
 
 
+How to build production and test production build locally:
+#########################################################################
+bradleys-mbp:ea-component-library anniehuang$ npm install -g http-server
+bradleys-mbp:ea-component-library anniehuang$ npm run build-prod
+bradleys-mbp:ea-component-library anniehuang$ cd ./dist/ea-component-library/           << Need to get to the location where index.html locates
+bradleys-mbp:ea-component-library anniehuang$ http-server -o
+
+
 What to do to strip repo as a basic system (with button as the only one component):
 #######################################################################################################
 - D:\Temp\ea-component-library\src\app\showcase\app.component.html,         comment out all the routerLink and left only [routerLink]="['/button']"
@@ -173,25 +186,4 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\eauicomp.d.ts                                removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.d.ts)
 
 
-Others:
-##########
-"compile:sass": "node-sass src/assets/main.scss src/styles.css -w"
-npm run compile:sass
-Run:
-ng set default.styleExt less
 
-      "styles": [
-        "styles.scss",		<< change styles.less
-      ],
-
-Need to fix the the gulpfile.js:
-    gulp.src([
-        'src/app/components/common/common.css',
-        'src/app/components/**/*.css'
-    ])
-    and
-    gulp.src([
-        'src/app/components/**/*.css'
-    ])
-
-sass: --watch app.sass:app.css
