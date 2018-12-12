@@ -1,5 +1,6 @@
 bradleys-mbp:exports anniehuang$ ng generate library ea-comp-lib --prefix=eal
 bradleys-mbp:exports anniehuang$ ng build ea-comp-lib
+bradleys-mbp:exports anniehuang$ ng config schematics.@schematics/angular:component.styleext scss
 
 
 -----------------------
@@ -75,3 +76,7 @@ Built ea-comp-lib
 Built Angular Package!
  - from: /Users/anniehuang/projects/ea-component-library/projects/ea-comp-lib
  - to:   /Users/anniehuang/projects/ea-component-library/dist/ea-comp-lib
+
+
+-----------------------------
+
