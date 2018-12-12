@@ -2,9 +2,10 @@ import {NgModule}     from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ButtonDemo} from './buttondemo';
 import {ButtonDemoRoutingModule} from './buttondemo-routing.module';
-import {ButtonModule} from '../../../components/button2/button';
 import {TabViewModule} from '../../../components/tabview/tabview';
 import {CodeHighlighterModule} from '../../../components/codehighlighter/codehighlighter';
+
+import { ButtonModule } from 'ea-comp-lib';
 
 @NgModule({
 	imports: [
