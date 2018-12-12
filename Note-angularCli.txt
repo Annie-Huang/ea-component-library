@@ -2,6 +2,16 @@ bradleys-mbp:exports anniehuang$ ng generate library ea-comp-lib --prefix=eal
 bradleys-mbp:exports anniehuang$ ng build ea-comp-lib
 bradleys-mbp:exports anniehuang$ ng config schematics.@schematics/angular:component.styleext scss
 
+bradleys-mbp:ea-component-library anniehuang$ ng generate module foo --project=ea-comp-lib          << NEED to do this step first otherwise will just link the foo component to ea-component-lib.module.ts, rather than foo.module.ts
+bradleys-mbp:ea-component-library anniehuang$ ng generate component foo --project=ea-comp-lib
+
+Add the following into foo.module.ts, default does not export component.
+  exports: [FooComponent]
+
+Add export * from './lib/foo/foo.module'; into exports.ts
+
+bradleys-mbp:ea-component-library anniehuang$ ng build ea-comp-lib      << Need to build again for any change to take effect.
+
 
 -----------------------
 
@@ -80,3 +90,11 @@ Built Angular Package!
 
 -----------------------------
 
+bradleys-mbp:ea-component-library anniehuang$ ng generate module foo --project=ea-comp-lib
+CREATE projects/ea-comp-lib/src/lib/foo/foo.module.ts (187 bytes)
+bradleys-mbp:ea-component-library anniehuang$ ng generate component foo --project=ea-comp-lib
+CREATE projects/ea-comp-lib/src/lib/foo/foo.component.scss (0 bytes)
+CREATE projects/ea-comp-lib/src/lib/foo/foo.component.html (22 bytes)
+CREATE projects/ea-comp-lib/src/lib/foo/foo.component.spec.ts (607 bytes)
+CREATE projects/ea-comp-lib/src/lib/foo/foo.component.ts (258 bytes)
+UPDATE projects/ea-comp-lib/src/lib/foo/foo.module.ts (247 bytes)
