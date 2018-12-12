@@ -13,6 +13,9 @@ https://github.com/angular/angular-cli/issues/4778
 Juri Strumpflohner - Create and publish Angular libs like a Pro (https://www.youtube.com/watch?v=K4YMmwxGKjY)
 https://angular.io/guide/deployment
 https://www.tsmean.com/articles/how-to-write-a-typescript-library/angular/
+https://github.com/nrwl/nx/issues/225
+https://medium.com/@SirMaxxx/angular-6-creating-a-shareable-control-library-6a27f0ebe5c2
+
 
 How to create a component:
 #################################
