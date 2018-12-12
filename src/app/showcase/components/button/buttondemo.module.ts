@@ -5,13 +5,16 @@ import {ButtonDemoRoutingModule} from './buttondemo-routing.module';
 import {TabViewModule} from '../../../components/tabview/tabview';
 import {CodeHighlighterModule} from '../../../components/codehighlighter/codehighlighter';
 
+import { EaCompLibModule } from 'ea-comp-lib';
+
 @NgModule({
 	imports: [
 		CommonModule,
 		ButtonDemoRoutingModule,
         TabViewModule,
-        CodeHighlighterModule
-	],
+        CodeHighlighterModule,
+        EaCompLibModule
+    ],
 	declarations: [
 		ButtonDemo
 	]
