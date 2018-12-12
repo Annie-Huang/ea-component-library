@@ -1,0 +1,48 @@
+bradleys-mbp:exports anniehuang$ ng generate library ea-comp-lib --prefix=eal
+Your global Angular CLI version (7.1.2) is greater than your local
+version (7.1.0). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+CREATE projects/ea-comp-lib/karma.conf.js (968 bytes)
+CREATE projects/ea-comp-lib/ng-package.json (157 bytes)
+CREATE projects/ea-comp-lib/package.json (141 bytes)
+CREATE projects/ea-comp-lib/tsconfig.lib.json (726 bytes)
+CREATE projects/ea-comp-lib/tsconfig.spec.json (246 bytes)
+CREATE projects/ea-comp-lib/tslint.json (247 bytes)
+CREATE projects/ea-comp-lib/src/exports.ts (175 bytes)
+CREATE projects/ea-comp-lib/src/test.ts (700 bytes)
+CREATE projects/ea-comp-lib/src/lib/ea-comp-lib.module.ts (241 bytes)
+CREATE projects/ea-comp-lib/src/lib/ea-comp-lib.component.spec.ts (651 bytes)
+CREATE projects/ea-comp-lib/src/lib/ea-comp-lib.component.ts (269 bytes)
+CREATE projects/ea-comp-lib/src/lib/ea-comp-lib.service.spec.ts (350 bytes)
+CREATE projects/ea-comp-lib/src/lib/ea-comp-lib.service.ts (138 bytes)
+UPDATE angular.json (5630 bytes)
+UPDATE package.json (2825 bytes)
+UPDATE tsconfig.json (550 bytes)
+
+> node-sass@4.11.0 install /Users/anniehuang/projects/ea-component-library/node_modules/ng-packagr/node_modules/node-sass
+> node scripts/install.js
+
+Cached binary found at /Users/anniehuang/.npm/node-sass/4.11.0/darwin-x64-57_binding.node
+
+> node-sass@4.11.0 postinstall /Users/anniehuang/projects/ea-component-library/node_modules/ng-packagr/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /Users/anniehuang/projects/ea-component-library/node_modules/ng-packagr/node_modules/node-sass/vendor/darwin-x64-57/binding.node
+Testing binary
+Binary is fine
+
+> ng-packagr@4.4.5 postinstall /Users/anniehuang/projects/ea-component-library/node_modules/ng-packagr
+> opencollective postinstall
+
+
+                       Thanks for installing ng-packagr 🙏
+                 Please consider donating to our open collective
+                        to help us maintain this package.
+
+                            Number of contributors: 46
+                               Number of backers: 0
+                               Annual budget: US$ 0
+                              Current balance: US$ 0
+
+         👉  Donate: https://opencollective.com/ng-packagr/donate

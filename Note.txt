@@ -15,6 +15,7 @@ https://angular.io/guide/deployment
 https://www.tsmean.com/articles/how-to-write-a-typescript-library/angular/
 https://github.com/nrwl/nx/issues/225
 https://medium.com/@SirMaxxx/angular-6-creating-a-shareable-control-library-6a27f0ebe5c2
+https://angular.io/cli/generate#library-command
 
 
 How to create a component:
