@@ -1,3 +1,9 @@
+https://github.com/angular/angular/issues/17766
+https://stackoverflow.com/questions/35915433/angular2-styles-in-a-directive/42793957
+
+
+
+
 bradleys-mbp:exports anniehuang$ ng generate library ea-comp-lib --prefix=eal
 bradleys-mbp:exports anniehuang$ ng build ea-comp-lib
 bradleys-mbp:exports anniehuang$ ng config schematics.@schematics/angular:component.styleext scss
@@ -12,6 +18,10 @@ Add export * from './lib/foo/foo.module'; into exports.ts
 
 bradleys-mbp:ea-component-library anniehuang$ ng build ea-comp-lib      << Need to build again for any change to take effect.
 
+D:\Temp\ea-component-library>npm run package
+
+D:\Temp\my-angular-app>npm install ..\ea-component-library\dist\ea-comp-lib\ea-comp-lib-0.0.1.tgz
+D:\Temp\my-angular-app>npm uninstall ea-comp-lib
 
 -----------------------
 
