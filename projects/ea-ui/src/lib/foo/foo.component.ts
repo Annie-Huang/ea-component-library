@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'eal-foo',
+  selector: 'eui-foo',
   templateUrl: './foo.component.html',
   styleUrls: ['./foo.component.scss']
 })

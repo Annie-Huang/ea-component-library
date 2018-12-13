@@ -11,6 +11,9 @@ D:\Temp\ea-component-library>npm run package
 
 bradleys-mbp:my-angular-app anniehuang$ npm install ../ea-component-library/dist/ea-ui/ea-ui-0.0.1.tgz
 
+D:\Temp\ea-component-library>ng generate module bar --project=ea-ui
+D:\Temp\ea-component-library>ng generate component bar --project=ea-ui
+
 
 -----------------------
 

@@ -140,7 +140,7 @@
       "root": "projects/ea-ui",
       "sourceRoot": "projects/ea-ui/src",
       "projectType": "library",
-      "prefix": "eal",
+      "prefix": "eui",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
