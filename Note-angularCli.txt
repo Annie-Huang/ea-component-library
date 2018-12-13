@@ -2,7 +2,17 @@ https://github.com/angular/angular/issues/17766
 https://stackoverflow.com/questions/35915433/angular2-styles-in-a-directive/42793957
 
 
+After renaming ea-comp-lib to ea-ui
+bradleys-mbp:ea-component-library anniehuang$ ng build ea-ui
 
+Start the demo and make sure it work.
+
+D:\Temp\ea-component-library>npm run package
+
+bradleys-mbp:my-angular-app anniehuang$ npm install ../ea-component-library/dist/ea-ui/ea-ui-0.0.1.tgz
+
+
+-----------------------
 
 bradleys-mbp:exports anniehuang$ ng generate library ea-comp-lib --prefix=eal
 bradleys-mbp:exports anniehuang$ ng build ea-comp-lib

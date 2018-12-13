@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ea-comp-lib
+ * Public API Surface of ea-ui
  */
 
 export * from './lib/foo/foo.module';

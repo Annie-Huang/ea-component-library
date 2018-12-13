@@ -5,7 +5,7 @@ import {ButtonDemoRoutingModule} from './buttondemo-routing.module';
 import {TabViewModule} from '../../../components/tabview/tabview';
 import {CodeHighlighterModule} from '../../../components/codehighlighter/codehighlighter';
 
-import { ButtonModule } from 'ea-comp-lib';
+import { ButtonModule } from 'ea-ui';
 
 @NgModule({
 	imports: [

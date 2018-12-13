@@ -18,11 +18,11 @@
       "dom"
     ],
     "paths": {
-      "ea-comp-lib": [
-        "dist/ea-comp-lib"
+      "ea-ui": [
+        "dist/ea-ui"
       ],
-      "ea-comp-lib/*": [
-        "dist/ea-comp-lib/*"
+      "ea-ui/*": [
+        "dist/ea-ui/*"
       ]
     }
   }

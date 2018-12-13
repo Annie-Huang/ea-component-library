@@ -123,34 +123,34 @@ gulp.task('build-assets', [
 // ###########################################################################################
 
 //Building project through the angular-cli g library with run sequence
-gulp.task('ea-comp-lib-build-assets', [
-    'ea-comp-lib-copy-global-scss',
-    'ea-comp-lib-copy-component-scss',
-    'ea-comp-lib-build-css-prod'
+gulp.task('ea-ui-build-assets', [
+    'ea-ui-copy-global-scss',
+    'ea-ui-copy-component-scss',
+    'ea-ui-build-css-prod'
 ]);
 
-gulp.task('ea-comp-lib-copy-global-scss', function () {
+gulp.task('ea-ui-copy-global-scss', function () {
     gulp.src([
-        'projects/ea-comp-lib/src/scss/**/*'
+        'projects/ea-ui/src/scss/**/*'
     ])
-    .pipe(gulp.dest('dist/ea-comp-lib/scss'));
+    .pipe(gulp.dest('dist/ea-ui/scss'));
 });
 
-gulp.task('ea-comp-lib-copy-component-scss', function () {
+gulp.task('ea-ui-copy-component-scss', function () {
     gulp.src([
-        'projects/ea-comp-lib/src/lib/**/*.scss'
+        'projects/ea-ui/src/lib/**/*.scss'
     ])
-    .pipe(gulp.dest('dist/ea-comp-lib/lib'));
+    .pipe(gulp.dest('dist/ea-ui/lib'));
 });
 
-gulp.task('ea-comp-lib-build-css-prod', function() {
+gulp.task('ea-ui-build-css-prod', function() {
     gulp.src([
-        'projects/ea-comp-lib/src/lib/**/*.scss'
+        'projects/ea-ui/src/lib/**/*.scss'
     ])
     .pipe(sass())
     .pipe(concat('eauicomp.css'))
-    .pipe(gulp.dest('dist/ea-comp-lib'))
+    .pipe(gulp.dest('dist/ea-ui'))
     .pipe(uglifycss({"uglyComments": true}))
     .pipe(rename('eauicomp.min.css'))
-    .pipe(gulp.dest('dist/ea-comp-lib'));
+    .pipe(gulp.dest('dist/ea-ui'));
 });
