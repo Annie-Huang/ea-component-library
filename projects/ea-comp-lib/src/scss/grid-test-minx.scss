@@ -1,0 +1,35 @@
+//===================================================================
+//  GRID
+//===================================================================
+
+$grid-max-width: 1000px !default;
+$grid-total-columns: 12 !default;
+$grid-gutter-size: 30px !default;
+
+$grid-row-class: g-row !default;
+$grid-column-class: g-col !default;
+$grid-offset-class: offset- !default;
+$grid-pull-class: pull- !default;
+$grid-push-class: push- !default;
+
+$grid-include-row: true !default;
+$grid-include-column: true !default;
+$grid-include-offset: true !default;
+$grid-include-pull: true !default;
+$grid-include-push: true !default;
+$grid-include-responsive: true !default;
+
+
+// @param {number} $columns
+// @param {number} $total-columns [$grid-total-columns]
+// @returns {number} with `%` unit or 0
+//
+@function grid-column-width($columns, $total-columns: $grid-total-columns) {
+    $width: percentage($columns / $total-columns);
+
+    @if $width == 0% {
+        @return 0;
+    }
+
+    @return $width;
+}
