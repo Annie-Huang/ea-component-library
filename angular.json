@@ -19,7 +19,6 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.png",
-              "src/images",
               "src/assets",
               "src/upload.php"
             ],

@@ -124,10 +124,18 @@ gulp.task('build-assets', [
 
 //Building project through the angular-cli g library with run sequence
 gulp.task('ea-ui-build-assets', [
+    'ea-ui-copy-asset-folder',
     'ea-ui-copy-global-scss',
     'ea-ui-copy-component-scss',
     'ea-ui-build-css-prod'
 ]);
+
+gulp.task('ea-ui-copy-asset-folder', function () {
+    gulp.src([
+        'projects/ea-ui/src/assets/**/*'
+    ])
+        .pipe(gulp.dest('dist/ea-ui/assets'));
+});
 
 gulp.task('ea-ui-copy-global-scss', function () {
     gulp.src([

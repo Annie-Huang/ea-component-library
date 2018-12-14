@@ -1,8 +1,9 @@
+//$scss-root: "../../";
 @import "../../scss/variables";
 
 .ea-button {
-    //background: $background-color url("images/rock_01_png___by_alzstock-d5r84up.png");
-    background-color: $background-color;
+    background: $background-color url("./assets/images/rock_01_png___by_alzstock-d5r84up.png");
+    //background-color: $background-color;
     color: $font-color;
     height: 3em;
     font-size: 14px;
