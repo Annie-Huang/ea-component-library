@@ -935,11 +935,6 @@ a {
     text-align: center;
 }
 
-.home .primeng-designer img {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
 /* PRO */
 .home .prosupport,
 .support-image {
@@ -971,45 +966,6 @@ a {
 
 .support p {
     line-height: 1.5;
-}
-
-/*NOTIFICATION*/
-.notification-topbar {
-  width: 100%;
-  height: 150px;
-  cursor: pointer;
-  position: relative;
-  display: block;
-  background-image: url("/assets/showcase/images/prime-showcases-notification-topbar-bg.png");
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.notification-topbar .notification-topbar-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  position: absolute;
-  float: left;
-}
-
-.notification-topbar .notification-topbar-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  color: white;
-}
-
-.notification-topbar .notification-topbar-image-mobile {
-  width: 100%;
-  top: 45px;
-  display: none;
-  position: absolute;
-  float: left;
 }
 
 @media (max-width: 450px) {
