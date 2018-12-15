@@ -834,38 +834,6 @@ a {
     color: #B27800;
 }
 
-.home .introduction {
-    background-color: #1976d2;
-    background: url('/assets/showcase/images/home/introduction.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
-    padding: 80px 30px 80px 50px;
-}
-
-.home .introduction > div {
-    padding: 100px 100px 0 100px;
-    height: 200px;
-}
-
-.home .introduction img {
-    width: 480px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.home .introduction h1 {
-    font-weight: normal;
-    margin-bottom: 5px;
-}
-
-.home .introduction h2 {
-    font-weight: bold;
-    margin-bottom: 40px;
-    margin-top: 0;
-}
-
 /* Features */
 .home .features {
     background-color: #f5f7f8;
