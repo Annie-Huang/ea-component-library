@@ -1,4 +1,3 @@
-export * from './components/common/api';
 export * from './components/common/shared';
 export * from './components/autocomplete/autocomplete';
 export * from './components/codehighlighter/codehighlighter';

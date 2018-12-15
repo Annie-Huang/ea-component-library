@@ -194,11 +194,22 @@ What to do to strip repo as a basic system (with button as the only one componen
 - D:\Temp\ea-component-library\src\app\showcase\app.module.ts               removed reference to CarService, CountryService, EventService, NodeService
 - D:\Temp\ea-component-library\src\app\components\*                         removed all except for button, autocomplete, codehighlighter and the dependentcy of these 3 modules.
 - D:\Temp\ea-component-library\src\app\components\common\*                  removed all except for those required by button, autocomplete, codehighlighter.
-- D:\Temp\ea-component-library\src\app\components\common\api.ts             updated to only keep those required by button, autocomplete, codehighlighter.
 - D:\Temp\ea-component-library\src\assets\showcase\css\eauicomp.css         updated to only keep those required by button, autocomplete, codehighlighter. (used to call D:\Temp\ea-component-library\src\assets\showcase\css\primeng.css)
-- D:\Temp\ea-component-library\exports                                      removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (to match D:\Temp\ea-component-library\src\app\components)
-- D:\Temp\ea-component-library\eauicomp.js                                  removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.js)
-- D:\Temp\ea-component-library\eauicomp.d.ts                                removed all excepted for api, autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.d.ts)
+- D:\Temp\ea-component-library\exports                                      removed all excepted for autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (to match D:\Temp\ea-component-library\src\app\components)
+- D:\Temp\ea-component-library\eauicomp.js                                  removed all excepted for autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.js)
+- D:\Temp\ea-component-library\eauicomp.d.ts                                removed all excepted for autocomplete, button, codehighlighter inputtext, shared, tabview, tooltip. (used to call D:\Temp\ea-component-library\primeng.d.ts)
 
-
+The reason we keep the list of components under D:\Temp\ea-component-library\src\app\components is because:
+Demo page search search panel requires:
+    - autocomplete, (which relies on the following)
+        - inputtext
+        - common/shared
+        - dom
+        - utils/objectutils
+            - common/selectitem
+Button demo content page requires:
+    - tabview
+        - common/blockableui
+        - tooltip
+    - codehighlighter
 
