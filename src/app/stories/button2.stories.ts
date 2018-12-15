@@ -3,7 +3,7 @@ import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import {Button} from '../components/button2/button';
+import {Button} from 'ea-ui';
 // import '../../assets/components/themes/nova-light/theme.css';
 // import '../src/assets/components/themes/nova-light/theme.css';
 // import '../src/assets/components/themes/nova-light/fonts/open-sans-v15-latin-regular.woff2';
